@@ -50,5 +50,15 @@ public class PastaBar {
 		}
 		return 0;
 	}
+	
+	public static boolean isRegularCustomer(String[] array, String value) {
+		for(int i = 0; i < array.length; i++) {
+			if(value.equals(array[i])) {
+				return true;
+			}
+		}
+		return false;
+		
+	}
 
 }
