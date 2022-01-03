@@ -22,7 +22,7 @@ public class PastaBar {
 			System.out.println("Izaberite sastojak za pastu: ");
 			ingredient = s.nextLine();
 			if(!ingredient.equals("Poruci")) {
-				int index = findIgredient(ingredients, ingredient);
+				int index = findIngredient(ingredients, ingredient);
 				int price = prices[index];
 				sum = sum + price;
 			}
@@ -42,5 +42,13 @@ public class PastaBar {
 
 	}
 	
+	public static int findIngredient (String[] array, String value) {
+		for(int i = 0; i < array.length; i++) {
+			if(value.equals(array[i])) {
+				return i;
+			}
+		}
+		return 0;
+	}
 
 }
